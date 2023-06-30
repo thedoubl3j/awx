@@ -1,6 +1,6 @@
 # Adding execution nodes to AWX
 
-Stand-alone execution nodes can be added to run alongside the Kubernetes deployment of AWX. These machines will not be a part of the AWX Kubernetes cluster. The control nodes running in the cluster will connect and submit work to these machines via Receptor. The machines be registered in AWX as type "execution" instances, meaning they will only be used to run AWX Jobs (i.e. they will not dispatch work or handle web requests as control nodes do).
+Stand-alone execution nodes can be added to run alongside the Kubernetes deployment of AWX. These machines will not be a part of the AWX Kubernetes cluster. The control nodes running in the cluster will connect and submit work to these machines via Receptor. The machines will be registered in AWX as type "execution" instances, meaning they will only be used to run AWX Jobs (i.e. they will not dispatch work or handle web requests as control nodes do).
 
 Below is an example of a single AWX pod connecting to two different execution nodes. For each execution node, the awx-ee container makes an outbound TCP connection to the machine via Receptor.
 
@@ -20,6 +20,11 @@ Below is an example of a single AWX pod connecting to two different execution no
 ```
 
 Note, if the AWX deployment is scaled up, the new AWX pod will also make TCP connections to each execution node.
+
+
+# Adding hop nodes to AWX
+
+Hop nodes can be added to sit between the control plane of awx and stand alone execution nodes. These machines will not be a part of the AWX Kubernetes cluster. The machines will be registered in AWX as type "hop" instances, meaning they will only handle inbound / outbound traffic for otherwise unreachable nodes in a different or more strict network 
 
 
 ## Overview
