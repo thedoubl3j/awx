@@ -914,22 +914,7 @@ class InventorySourceOptions(BaseModel):
 
     injectors = dict()
 
-    SOURCE_CHOICES = [
-        ('file', _('File, Directory or Script')),
-        ('constructed', _('Template additional groups and hostvars at runtime')),
-        ('scm', _('Sourced from a Project')),
-        ('ec2', _('Amazon EC2')),
-        ('gce', _('Google Compute Engine')),
-        ('azure_rm', _('Microsoft Azure Resource Manager')),
-        ('vmware', _('VMware vCenter')),
-        ('satellite6', _('Red Hat Satellite 6')),
-        ('openstack', _('OpenStack')),
-        ('rhv', _('Red Hat Virtualization')),
-        ('controller', _('Red Hat Ansible Automation Platform')),
-        ('insights', _('Red Hat Insights')),
-        ('terraform', _('Terraform State')),
-        ('openshift_virtualization', _('OpenShift Virtualization')),
-    ]
+    SOURCE_CHOICES = [('foo', '1'), ('bar', '2'), ('baz', '3')]
 
     # From the options of the Django management base command
     INVENTORY_UPDATE_VERBOSITY_CHOICES = [
@@ -943,7 +928,6 @@ class InventorySourceOptions(BaseModel):
 
     source = models.CharField(
         max_length=32,
-        choices=SOURCE_CHOICES,
         blank=False,
         default=None,
     )

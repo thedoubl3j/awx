@@ -2350,6 +2350,7 @@ class GroupVariableDataSerializer(BaseVariableDataSerializer):
 
 class InventorySourceOptionsSerializer(BaseSerializer):
     credential = DeprecatedCredentialField(help_text=_('Cloud credential to use for inventory updates.'))
+    source = serializers.ChoiceField(choices=InventorySource.SOURCE_CHOICES, read_only=True)
 
     class Meta:
         fields = (
