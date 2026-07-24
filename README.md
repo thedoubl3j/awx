@@ -14,7 +14,7 @@
 > * [Upcoming changes to AWX Operator installation methods](https://forum.ansible.com/t/upcoming-changes-to-awx-operator-installation-methods/7598)
 > * [AWX UI and credential types transitioning to the new pluggable architecture](https://forum.ansible.com/t/awx-ui-and-credential-types-transitioning-to-the-new-pluggable-architecture/8027)
 
-AWX provides a web-based user interface, REST API, and task engine built on top of [Ansible](https://github.com/ansible/ansible). It is one of the upstream projects for [Red Hat Ansible Automation Platform](https://www.ansible.com/products/automation-platform).
+AWX provide a web-based user interface, REST API, and task engine built on top of [Ansible](https://github.com/ansible/ansible). It is one of the upstream projects for [Red Hat Ansible Automation Platform](https://www.ansible.com/products/automation-platform).
 
 To install AWX, please view the [Install guide](./INSTALL.md).
 
